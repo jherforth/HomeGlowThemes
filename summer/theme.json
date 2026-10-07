@@ -1,0 +1,254 @@
+{
+  "manifestVersion": 2,
+  "id": "summer",
+  "version": "1.0.0",
+  "author": "jherforth",
+  "name": "Summer",
+  "description": "Bright and warm: sunlit gold, coral and turquoise drifting across a clear sky, or a warm indigo evening glow in dark mode.",
+  "extends": "classic",
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "colors": {
+    "primary": "#e2f4fb",
+    "secondary": "#12a4b4",
+    "accent": "#f0603f"
+  },
+  "tokens": {
+    "all": {
+      "--hg-radius-sm": "8px",
+      "--hg-radius-md": "14px",
+      "--hg-radius-lg": "20px",
+      "--hg-frame-radius": "18px",
+      "--hg-frame-decoration-width": "1px",
+      "--hg-frame-decoration-style": "solid",
+      "--success": "#1fa87a",
+      "--warning": "#f5a623",
+      "--hg-error": "#e5484d",
+      "--hg-error-hover": "#cc3a3f",
+      "--hg-error-surface": "rgba(229, 72, 77, 0.14)",
+      "--hg-meter-thickness": "4px",
+      "--hg-meter-cap": "round",
+      "--hg-meter-fill": "var(--accent)"
+    },
+    "light": {
+      "--primary": "#e2f4fb",
+      "--secondary": "#12a4b4",
+      "--accent": "#f0603f",
+      "--accent-rgb": "240, 96, 63",
+      "--background": "#fff6e6",
+      "--hg-page-image": "linear-gradient(180deg, #e2f4fb 0%, #f3f8f4 45%, #fff3df 100%)",
+      "--surface": "#fffdf8",
+      "--card-bg": "rgba(255, 255, 255, 0.6)",
+      "--hg-frame-bg": "rgba(255, 255, 255, 0.6)",
+      "--text": "#23303a",
+      "--text-secondary": "#5b6b76",
+      "--border": "#e4e0d6",
+      "--card-border": "#e4e0d6",
+      "--hg-hover": "rgba(240, 96, 63, 0.1)",
+      "--hg-frame-decoration-color": "rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.55) rgba(35, 48, 58, 0.12) rgba(255, 255, 255, 0.55)",
+      "--hg-frame-shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 30px rgba(60, 90, 110, 0.16)",
+      "--hg-frame-shadow-hover": "inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 14px 38px rgba(60, 90, 110, 0.24)",
+      "--shadow": "0 6px 20px rgba(60, 90, 110, 0.14)",
+      "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 45%)",
+      "--hg-frame-overlay": "linear-gradient(120deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 30%, rgba(255, 255, 255, 0) 45%)",
+      "--hg-meter-track": "rgba(35, 48, 58, 0.12)",
+      "--bottom-bar-bg": "rgba(255, 253, 248, 0.82)",
+      "--dock-bg": "rgba(255, 253, 248, 0.82)",
+      "--dock-border": "rgba(255, 255, 255, 0.9)",
+      "--dock-separator": "rgba(35, 48, 58, 0.12)",
+      "--dock-icon": "#3f5563",
+      "--dock-active-bg": "#f0603f",
+      "--dock-active-border": "#ffc2b0",
+      "--dock-active-icon": "#ffffff"
+    },
+    "dark": {
+      "--primary": "#e2f4fb",
+      "--secondary": "#3fd0d4",
+      "--accent": "#ffb547",
+      "--accent-rgb": "255, 181, 71",
+      "--background": "#0e1428",
+      "--hg-page-image": "linear-gradient(180deg, #0d1733 0%, #1a1838 55%, #2a1a35 100%)",
+      "--surface": "#161d36",
+      "--card-bg": "rgba(16, 22, 46, 0.6)",
+      "--hg-frame-bg": "rgba(16, 22, 46, 0.6)",
+      "--text": "#fff3e6",
+      "--text-secondary": "#c2b8c9",
+      "--border": "#2f3656",
+      "--card-border": "#2f3656",
+      "--hg-hover": "rgba(255, 181, 71, 0.14)",
+      "--hg-frame-decoration-color": "rgba(255, 255, 255, 0.14) rgba(255, 255, 255, 0.07) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.07)",
+      "--hg-frame-shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 32px rgba(0, 0, 0, 0.4)",
+      "--hg-frame-shadow-hover": "inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 28px rgba(255, 181, 71, 0.22)",
+      "--shadow": "0 6px 20px rgba(0, 0, 0, 0.35)",
+      "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 45%)",
+      "--hg-frame-overlay": "linear-gradient(120deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 30%, rgba(255, 255, 255, 0) 45%)",
+      "--hg-meter-track": "rgba(255, 243, 230, 0.16)",
+      "--bottom-bar-bg": "rgba(14, 20, 40, 0.82)",
+      "--dock-bg": "rgba(14, 20, 40, 0.82)",
+      "--dock-border": "rgba(255, 181, 71, 0.25)",
+      "--dock-separator": "rgba(255, 243, 230, 0.16)",
+      "--dock-icon": "#e6d8c8",
+      "--dock-active-bg": "#ffb547",
+      "--dock-active-border": "#ffe0a8",
+      "--dock-active-icon": "#1a1430"
+    }
+  },
+  "mui": {
+    "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif",
+    "radius": 12,
+    "pillButtons": true
+  },
+  "muiModes": {
+    "light": {
+      "primary": "#f0603f",
+      "secondary": "#12a4b4",
+      "error": "#e5484d",
+      "background": "#fff6e6",
+      "paper": "#fffdf8",
+      "text": "#23303a",
+      "textSecondary": "#5b6b76",
+      "divider": "#e4e0d6"
+    },
+    "dark": {
+      "primary": "#ffb547",
+      "secondary": "#3fd0d4",
+      "error": "#e5484d",
+      "background": "#0e1428",
+      "paper": "#161d36",
+      "text": "#fff3e6",
+      "textSecondary": "#c2b8c9",
+      "divider": "#2f3656"
+    }
+  },
+  "ambience": [
+    {
+      "layer": "blobs",
+      "modes": [
+        "light"
+      ],
+      "colors": [
+        "#ffd166",
+        "#ff9f80",
+        "#5fd3d6",
+        "#7cc6f2"
+      ],
+      "count": [
+        3,
+        4
+      ],
+      "size": [
+        65,
+        90
+      ],
+      "seconds": [
+        70,
+        110
+      ],
+      "opacity": 0.62
+    },
+    {
+      "layer": "blobs",
+      "modes": [
+        "light"
+      ],
+      "colors": [
+        "#ffe08a",
+        "#ffb38f",
+        "#8ce3d9",
+        "#9fd4f7",
+        "#ff8fa3"
+      ],
+      "count": [
+        3,
+        5
+      ],
+      "size": [
+        30,
+        55
+      ],
+      "seconds": [
+        40,
+        75
+      ],
+      "opacity": 0.55
+    },
+    {
+      "layer": "blobs",
+      "modes": [
+        "dark"
+      ],
+      "colors": [
+        "#ff6b6b",
+        "#ff9f43",
+        "#6c5ce7",
+        "#13a8b0"
+      ],
+      "count": [
+        3,
+        4
+      ],
+      "size": [
+        65,
+        90
+      ],
+      "seconds": [
+        70,
+        110
+      ],
+      "opacity": 0.42
+    },
+    {
+      "layer": "blobs",
+      "modes": [
+        "dark"
+      ],
+      "colors": [
+        "#ff8e72",
+        "#e45d9b",
+        "#4b7bec",
+        "#20bfa9"
+      ],
+      "count": [
+        3,
+        5
+      ],
+      "size": [
+        30,
+        55
+      ],
+      "seconds": [
+        40,
+        75
+      ],
+      "opacity": 0.35
+    }
+  ],
+  "variety": "load",
+  "confetti": {
+    "colors": {
+      "light": [
+        "#ffd166",
+        "#f0603f",
+        "#ff9f80",
+        "#2ec4c6",
+        "#4fb3f0",
+        "#ff8fa3"
+      ],
+      "dark": [
+        "#ffb547",
+        "#ff6b6b",
+        "#ff9f43",
+        "#3fd0d4",
+        "#8c7bff",
+        "#e45d9b"
+      ]
+    },
+    "shapes": [
+      "streamer",
+      "square",
+      "circle"
+    ]
+  }
+}

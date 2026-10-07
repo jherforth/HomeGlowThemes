@@ -204,7 +204,7 @@ repository.
 
 ## 8. Examples
 
-Both are in the themes repository.
+All are in the themes repository.
 
 - **Starship** (`starship/`) layers a sometimes-galaxy (`image`, picked
   from three, at a random angle, with a `chance`), a starfield in stellar
@@ -215,3 +215,8 @@ Both are in the themes repository.
   bubbles from `bubble.svg`, a sea floor per mode (`image`), a still `sprites`
   layer scattering eight kinds of coral, swaying tinted kelp with a current,
   and a swaying mix of fans, whips and anemones. Every load is a new reef.
+- **Spring**, **Summer**, **Autumn** and **Winter** (`spring/`, `summer/`,
+  `autumn/`, `winter/`) are the simplest kind of theme: no pictures or fonts,
+  only tokens and two `blobs` layers per mode, a few large slow washes of
+  seasonal color under smaller, quicker ones. Each has a light and a dark
+  palette, and confetti in the season's colors.
