@@ -1,8 +1,8 @@
 {
   "manifestVersion": 2,
   "id": "spring",
-  "version": "1.0.0",
-  "author": "jherforth",
+  "version": "1.0.1",
+  "author": "HomeGlow",
   "name": "Spring",
   "description": "Fresh and light: soft blossom pinks, lilac and new-leaf greens drifting over a pale morning sky, or a mild violet twilight in dark mode.",
   "extends": "classic",
@@ -143,8 +143,8 @@
         90
       ],
       "seconds": [
-        70,
-        110
+        45,
+        75
       ],
       "opacity": 0.75
     },
@@ -169,8 +169,8 @@
         55
       ],
       "seconds": [
-        40,
-        75
+        25,
+        45
       ],
       "opacity": 0.65
     },
@@ -194,8 +194,8 @@
         90
       ],
       "seconds": [
-        70,
-        110
+        45,
+        75
       ],
       "opacity": 0.6
     },
@@ -219,8 +219,8 @@
         55
       ],
       "seconds": [
-        40,
-        75
+        25,
+        45
       ],
       "opacity": 0.4
     }

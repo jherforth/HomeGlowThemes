@@ -1,8 +1,8 @@
 {
   "manifestVersion": 2,
   "id": "autumn",
-  "version": "1.0.0",
-  "author": "jherforth",
+  "version": "1.0.1",
+  "author": "HomeGlow",
   "name": "Autumn",
   "description": "Warm and mellow: amber, rust, gold and olive drifting over soft parchment, or deep ember tones on a dark evening in dark mode.",
   "extends": "classic",
@@ -143,8 +143,8 @@
         90
       ],
       "seconds": [
-        70,
-        110
+        45,
+        75
       ],
       "opacity": 0.55
     },
@@ -169,8 +169,8 @@
         55
       ],
       "seconds": [
-        40,
-        75
+        25,
+        45
       ],
       "opacity": 0.45
     },
@@ -194,8 +194,8 @@
         90
       ],
       "seconds": [
-        70,
-        110
+        45,
+        75
       ],
       "opacity": 0.45
     },
@@ -219,8 +219,8 @@
         55
       ],
       "seconds": [
-        40,
-        75
+        25,
+        45
       ],
       "opacity": 0.38
     }

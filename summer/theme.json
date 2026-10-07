@@ -1,8 +1,8 @@
 {
   "manifestVersion": 2,
   "id": "summer",
-  "version": "1.0.0",
-  "author": "jherforth",
+  "version": "1.0.1",
+  "author": "HomeGlow",
   "name": "Summer",
   "description": "Bright and warm: sunlit gold, coral and turquoise drifting across a clear sky, or a warm indigo evening glow in dark mode.",
   "extends": "classic",
@@ -143,8 +143,8 @@
         90
       ],
       "seconds": [
-        70,
-        110
+        45,
+        75
       ],
       "opacity": 0.62
     },
@@ -169,8 +169,8 @@
         55
       ],
       "seconds": [
-        40,
-        75
+        25,
+        45
       ],
       "opacity": 0.55
     },
@@ -194,8 +194,8 @@
         90
       ],
       "seconds": [
-        70,
-        110
+        45,
+        75
       ],
       "opacity": 0.42
     },
@@ -219,8 +219,8 @@
         55
       ],
       "seconds": [
-        40,
-        75
+        25,
+        45
       ],
       "opacity": 0.35
     }
