@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="242 240 116 60">
-<ellipse cx="300" cy="282" rx="56" ry="40" fill="#e9a15a" />
-<path d="M258 280 q 10 -22 22 -6 t 22 -4 t 22 6 t 18 -8 M262 296 q 14 -14 26 0 t 24 -2 t 26 4 M270 264 q 12 -16 26 -2 t 24 0 t 18 -6" stroke="#b8702f" stroke-width="3" fill="none" stroke-linecap="round" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="242 240 116 60"><defs><radialGradient id="g" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#f1c599"/><stop offset="0.5" stop-color="#e9a15a"/><stop offset="1" stop-color="#906438"/></radialGradient></defs><ellipse cx="300" cy="282" rx="56" ry="40" fill="url(#g)"/><path d="M258 280 q 10 -22 22 -6 t 22 -4 t 22 6 t 18 -8 M262 296 q 14 -14 26 0 t 24 -2 t 26 4 M270 264 q 12 -16 26 -2 t 24 0 t 18 -6" stroke="#906438" stroke-width="3.2" fill="none" stroke-linecap="round"/><path d="M258 279 q 10 -22 22 -6 t 22 -4 t 22 6 t 18 -8 M270 263 q 12 -16 26 -2 t 24 0 t 18 -6" stroke="#f1c599" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6" transform="translate(-1 -2)"/></svg>
