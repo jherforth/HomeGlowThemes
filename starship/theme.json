@@ -1,8 +1,8 @@
 {
   "manifestVersion": 1,
   "id": "starship",
-  "version": "1.0.0",
-  "author": "HomeGlow",
+  "version": "1.0.1",
+  "author": "mrramam",
   "name": "Starship",
   "description": "A 24th-century bridge console: black field, pill controls, curved frame elbows. Outside the viewport, planets, the odd galaxy, passing ships and the occasional drifting alien.",
   "extends": "classic",

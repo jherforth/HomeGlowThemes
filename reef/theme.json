@@ -1,8 +1,8 @@
 {
   "manifestVersion": 1,
   "id": "reef",
-  "version": "1.0.0",
-  "author": "HomeGlow",
+  "version": "1.0.1",
+  "author": "mrramam",
   "name": "Reef",
   "description": "A dive: sunlit shallows in light mode, a night dive in dark. Water gradients, coral and bioluminescent accents, bubble-soft frames.",
   "extends": "classic",
