@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="776 281 48 20">
-<ellipse cx="800" cy="292" rx="22" ry="9" fill="#ff9f80" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="776 281 48 20"><defs><radialGradient id="g" cx="0.35" cy="0.3" r="0.85"><stop offset="0" stop-color="#ffc3b0"/><stop offset="0.5" stop-color="#ff9f80"/><stop offset="1" stop-color="#9e634f"/></radialGradient></defs><ellipse cx="800" cy="292" rx="22" ry="9" fill="url(#g)"/><path d="M782 292 q 18 -8 36 0 M786 295 q 14 -6 28 0" stroke="#9e634f" stroke-width="1" fill="none" opacity="0.6"/></svg>

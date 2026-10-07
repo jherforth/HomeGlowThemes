@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 1,
+  "manifestVersion": 2,
   "id": "starship",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "mrramam",
   "name": "Starship",
   "description": "A 24th-century bridge console: black field, pill controls, curved frame elbows. Outside the viewport, planets, the odd galaxy, passing ships and the occasional drifting alien.",
@@ -84,7 +84,11 @@
       "--dark-button-gradient-end": "#cc99cc",
       "--hg-page-image": "radial-gradient(ellipse 60% 45% at 82% 18%, rgba(130, 80, 210, 0.38), rgba(0, 0, 0, 0) 70%), radial-gradient(ellipse 50% 40% at 12% 78%, rgba(40, 100, 210, 0.3), rgba(0, 0, 0, 0) 70%), radial-gradient(ellipse 35% 28% at 55% 55%, rgba(210, 90, 150, 0.14), rgba(0, 0, 0, 0) 70%)",
       "--hg-frame-image": "linear-gradient(180deg, rgba(153, 204, 255, 0.07) 0%, rgba(0, 0, 0, 0) 40%)",
-      "--hg-frame-overlay": "linear-gradient(115deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 30%)"
+      "--hg-frame-overlay": "linear-gradient(115deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 30%)",
+      "--hg-meter-track": "rgba(153, 119, 170, 0.35)",
+      "--hg-meter-fill": "#ff9900",
+      "--hg-meter-thickness": "4px",
+      "--hg-meter-cap": "butt"
     }
   },
   "mui": {
@@ -235,10 +239,10 @@
     {
       "layer": "particles",
       "motion": "twinkle",
-      "count": 16,
+      "count": 12,
       "size": [
-        2,
-        4
+        1.2,
+        2.6
       ],
       "seconds": [
         2,
@@ -315,8 +319,8 @@
         150
       ],
       "every": [
-        150,
-        420
+        60,
+        180
       ],
       "seconds": [
         0.7,
@@ -352,8 +356,8 @@
         8
       ],
       "every": [
-        90,
-        300
+        40,
+        120
       ],
       "seconds": [
         12,
@@ -391,8 +395,8 @@
         9
       ],
       "every": [
-        300,
-        900
+        120,
+        360
       ],
       "seconds": [
         40,

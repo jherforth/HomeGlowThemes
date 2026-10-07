@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 1,
+  "manifestVersion": 2,
   "id": "reef",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "mrramam",
   "name": "Reef",
   "description": "A dive: sunlit shallows in light mode, a night dive in dark. Water gradients, coral and bioluminescent accents, bubble-soft frames.",
@@ -48,7 +48,11 @@
       "--hg-error-hover": "#c7362c",
       "--hg-error-surface": "rgba(224, 69, 58, 0.14)",
       "--dock-active-image": "linear-gradient(135deg, rgba(0, 0, 0, 0) 0 38%, #ffffff 38% 62%, rgba(0, 0, 0, 0) 62%)",
-      "--hg-frame-overlay": "linear-gradient(115deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 28%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0) 72%, rgba(255, 255, 255, 0.07) 84%, rgba(255, 255, 255, 0) 92%)"
+      "--hg-frame-overlay": "linear-gradient(115deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.06) 28%, rgba(255, 255, 255, 0) 42%, rgba(255, 255, 255, 0) 72%, rgba(255, 255, 255, 0.07) 84%, rgba(255, 255, 255, 0) 92%)",
+      "--hg-frame-inset": "6px",
+      "--hg-meter-thickness": "4px",
+      "--hg-meter-cap": "round",
+      "--hg-meter-fill": "var(--accent)"
     },
     "light": {
       "--primary": "#c8f4ff",
@@ -77,7 +81,8 @@
       "--dock-active-bg": "#d7263d",
       "--dock-active-border": "#ffb199",
       "--dock-active-icon": "#06324a",
-      "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 35%, rgba(0, 70, 110, 0.12) 100%)"
+      "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 35%, rgba(0, 70, 110, 0.12) 100%)",
+      "--hg-meter-track": "rgba(6, 50, 74, 0.15)"
     },
     "dark": {
       "--primary": "#c8f4ff",
@@ -106,7 +111,8 @@
       "--dock-active-bg": "#d7263d",
       "--dock-active-border": "#b6f6ff",
       "--dock-active-icon": "#021628",
-      "--hg-frame-image": "linear-gradient(180deg, rgba(120, 220, 255, 0.12) 0%, rgba(120, 220, 255, 0.02) 35%, rgba(0, 0, 0, 0.25) 100%)"
+      "--hg-frame-image": "linear-gradient(180deg, rgba(120, 220, 255, 0.12) 0%, rgba(120, 220, 255, 0.02) 35%, rgba(0, 0, 0, 0.25) 100%)",
+      "--hg-meter-track": "rgba(216, 246, 255, 0.18)"
     }
   },
   "mui": {
@@ -178,6 +184,46 @@
     {
       "layer": "sprites",
       "motion": "none",
+      "chance": 0.55,
+      "count": [
+        1,
+        2
+      ],
+      "span": [
+        5,
+        95
+      ],
+      "base": "1vh",
+      "flip": true,
+      "opacity": 0.95,
+      "pictures": [
+        {
+          "src": {
+            "light": "assets/mound-a-day.svg",
+            "dark": "assets/mound-a-night.svg"
+          },
+          "aspect": 2.6,
+          "height": [
+            24,
+            36
+          ]
+        },
+        {
+          "src": {
+            "light": "assets/mound-b-day.svg",
+            "dark": "assets/mound-b-night.svg"
+          },
+          "aspect": 2.6,
+          "height": [
+            24,
+            36
+          ]
+        }
+      ]
+    },
+    {
+      "layer": "sprites",
+      "motion": "none",
       "count": [
         7,
         11
@@ -200,7 +246,7 @@
             8,
             12
           ],
-          "weight": 1.5
+          "weight": 0.6
         },
         {
           "src": {
@@ -285,30 +331,53 @@
     },
     {
       "layer": "sprites",
-      "src": "assets/kelp.svg",
       "motion": "sway",
       "count": [
-        6,
-        9
+        2,
+        16
+      ],
+      "clumps": [
+        1,
+        4
+      ],
+      "clumpWidth": [
+        3,
+        10
       ],
       "span": [
         0,
         100
       ],
-      "height": [
-        18,
-        34
+      "pictures": [
+        {
+          "src": "assets/kelp-tall.svg",
+          "aspect": 0.28,
+          "height": [
+            52,
+            80
+          ],
+          "weight": 3
+        },
+        {
+          "src": "assets/kelp.svg",
+          "aspect": 0.28,
+          "height": [
+            18,
+            40
+          ],
+          "weight": 2
+        }
       ],
-      "aspect": 0.2,
       "angle": [
-        3,
-        5
+        1.5,
+        3.5
       ],
       "seconds": [
-        6,
-        10
+        8,
+        14
       ],
       "current": true,
+      "flip": true,
       "base": "4vh",
       "opacity": 0.95,
       "tint": {
@@ -489,5 +558,39 @@
       }
     ],
     "mix": 0.6
-  }
+  },
+  "ornaments": [
+    {
+      "src": {
+        "light": "assets/bolt-day.svg",
+        "dark": "assets/bolt-night.svg"
+      },
+      "anchor": "top-left",
+      "size": "36px"
+    },
+    {
+      "src": {
+        "light": "assets/bolt-day.svg",
+        "dark": "assets/bolt-night.svg"
+      },
+      "anchor": "top-right",
+      "size": "36px"
+    },
+    {
+      "src": {
+        "light": "assets/bolt-day.svg",
+        "dark": "assets/bolt-night.svg"
+      },
+      "anchor": "bottom-right",
+      "size": "36px"
+    },
+    {
+      "src": {
+        "light": "assets/bolt-day.svg",
+        "dark": "assets/bolt-night.svg"
+      },
+      "anchor": "bottom-left",
+      "size": "36px"
+    }
+  ]
 }
