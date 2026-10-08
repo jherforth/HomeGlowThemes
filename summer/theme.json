@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 2,
+  "manifestVersion": 3,
   "id": "summer",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "HomeGlow",
   "name": "Summer",
   "description": "Bright and warm: sunlit gold, coral and turquoise drifting across a clear sky, or a warm indigo evening glow in dark mode.",
@@ -30,7 +30,9 @@
       "--hg-error-surface": "rgba(229, 72, 77, 0.14)",
       "--hg-meter-thickness": "4px",
       "--hg-meter-cap": "round",
-      "--hg-meter-fill": "var(--accent)"
+      "--hg-meter-fill": "var(--accent)",
+      "--hg-button-radius": "999px",
+      "--hg-button-weight": "600"
     },
     "light": {
       "--primary": "#e2f4fb",
@@ -61,7 +63,10 @@
       "--dock-icon": "#3f5563",
       "--dock-active-bg": "#f0603f",
       "--dock-active-border": "#ffc2b0",
-      "--dock-active-icon": "#ffffff"
+      "--dock-active-icon": "#ffffff",
+      "--hg-button-bg": "linear-gradient(135deg, #c9462a, #ad391d)",
+      "--hg-button-text": "#ffffff",
+      "--hg-button-quiet-border": "#f7a895"
     },
     "dark": {
       "--primary": "#e2f4fb",
@@ -92,7 +97,10 @@
       "--dock-icon": "#e6d8c8",
       "--dock-active-bg": "#ffb547",
       "--dock-active-border": "#ffe0a8",
-      "--dock-active-icon": "#1a1430"
+      "--dock-active-icon": "#1a1430",
+      "--hg-button-bg": "linear-gradient(135deg, #ffcb7a, #ffb547)",
+      "--hg-button-text": "#1a1430",
+      "--hg-button-quiet-border": "#876538"
     }
   },
   "mui": {

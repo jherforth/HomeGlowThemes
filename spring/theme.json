@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 2,
+  "manifestVersion": 3,
   "id": "spring",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "HomeGlow",
   "name": "Spring",
   "description": "Fresh and light: soft blossom pinks, lilac and new-leaf greens drifting over a pale morning sky, or a mild violet twilight in dark mode.",
@@ -30,7 +30,9 @@
       "--hg-error-surface": "rgba(217, 83, 79, 0.14)",
       "--hg-meter-thickness": "4px",
       "--hg-meter-cap": "round",
-      "--hg-meter-fill": "var(--accent)"
+      "--hg-meter-fill": "var(--accent)",
+      "--hg-button-radius": "999px",
+      "--hg-button-weight": "600"
     },
     "light": {
       "--primary": "#fff3f7",
@@ -61,7 +63,10 @@
       "--dock-icon": "#5a6a5e",
       "--dock-active-bg": "#d9578f",
       "--dock-active-border": "#f7b6cf",
-      "--dock-active-icon": "#ffffff"
+      "--dock-active-icon": "#ffffff",
+      "--hg-button-bg": "linear-gradient(135deg, #c0457a, #a5375f)",
+      "--hg-button-text": "#ffffff",
+      "--hg-button-quiet-border": "#eaa3c1"
     },
     "dark": {
       "--primary": "#fff3f7",
@@ -92,7 +97,10 @@
       "--dock-icon": "#d9c9d8",
       "--dock-active-bg": "#ff8fbf",
       "--dock-active-border": "#ffd1e4",
-      "--dock-active-icon": "#1d1527"
+      "--dock-active-icon": "#1d1527",
+      "--hg-button-bg": "linear-gradient(135deg, #ffb3d3, #ff8fbf)",
+      "--hg-button-text": "#1d1527",
+      "--hg-button-quiet-border": "#89536d"
     }
   },
   "mui": {

@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 2,
+  "manifestVersion": 3,
   "id": "autumn",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "HomeGlow",
   "name": "Autumn",
   "description": "Warm and mellow: amber, rust, gold and olive drifting over soft parchment, or deep ember tones on a dark evening in dark mode.",
@@ -30,7 +30,9 @@
       "--hg-error-surface": "rgba(192, 57, 43, 0.14)",
       "--hg-meter-thickness": "4px",
       "--hg-meter-cap": "round",
-      "--hg-meter-fill": "var(--accent)"
+      "--hg-meter-fill": "var(--accent)",
+      "--hg-button-radius": "999px",
+      "--hg-button-weight": "600"
     },
     "light": {
       "--primary": "#fdf5e8",
@@ -61,7 +63,10 @@
       "--dock-icon": "#6a5040",
       "--dock-active-bg": "#c2502f",
       "--dock-active-border": "#efb69e",
-      "--dock-active-icon": "#fff7ee"
+      "--dock-active-icon": "#fff7ee",
+      "--hg-button-bg": "linear-gradient(135deg, #c2502f, #a8411f)",
+      "--hg-button-text": "#ffffff",
+      "--hg-button-quiet-border": "#dd9f8d"
     },
     "dark": {
       "--primary": "#fdf5e8",
@@ -92,7 +97,10 @@
       "--dock-icon": "#e2cdb4",
       "--dock-active-bg": "#f0a04b",
       "--dock-active-border": "#ffd29e",
-      "--dock-active-icon": "#22140f"
+      "--dock-active-icon": "#22140f",
+      "--hg-button-bg": "linear-gradient(135deg, #f6bb73, #f0a04b)",
+      "--hg-button-text": "#22140f",
+      "--hg-button-quiet-border": "#83582c"
     }
   },
   "mui": {

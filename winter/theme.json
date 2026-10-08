@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 2,
+  "manifestVersion": 3,
   "id": "winter",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "HomeGlow",
   "name": "Winter",
   "description": "Cool and calm: icy blues, frost and pale lavender drifting over snow-white, or a quiet midnight blue in dark mode.",
@@ -30,7 +30,9 @@
       "--hg-error-surface": "rgba(214, 69, 80, 0.14)",
       "--hg-meter-thickness": "4px",
       "--hg-meter-cap": "round",
-      "--hg-meter-fill": "var(--accent)"
+      "--hg-meter-fill": "var(--accent)",
+      "--hg-button-radius": "999px",
+      "--hg-button-weight": "600"
     },
     "light": {
       "--primary": "#f4f8fc",
@@ -61,7 +63,10 @@
       "--dock-icon": "#4a5d72",
       "--dock-active-bg": "#3a7cc4",
       "--dock-active-border": "#b5d3f0",
-      "--dock-active-icon": "#ffffff"
+      "--dock-active-icon": "#ffffff",
+      "--hg-button-bg": "linear-gradient(135deg, #3674ba, #2b62a0)",
+      "--hg-button-text": "#ffffff",
+      "--hg-button-quiet-border": "#93b7df"
     },
     "dark": {
       "--primary": "#f4f8fc",
@@ -92,7 +97,10 @@
       "--dock-icon": "#c5d4e4",
       "--dock-active-bg": "#8fd3ff",
       "--dock-active-border": "#d4efff",
-      "--dock-active-icon": "#0c1424"
+      "--dock-active-icon": "#0c1424",
+      "--hg-button-bg": "linear-gradient(135deg, #b8e4ff, #8fd3ff)",
+      "--hg-button-text": "#0c1424",
+      "--hg-button-quiet-border": "#4d718d"
     }
   },
   "mui": {
