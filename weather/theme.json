@@ -1,0 +1,2138 @@
+{
+  "manifestVersion": 4,
+  "id": "weather",
+  "version": "1.0.0",
+  "author": "HomeGlow",
+  "name": "Weather",
+  "description": "The sky outside, behind your dashboard: sun or stars, clouds, fog, wind, rain, snow, hail and storms, changing as the weather does. Needs a weather provider and a location.",
+  "extends": "classic",
+  "modes": [
+    "light",
+    "dark"
+  ],
+  "variety": "load",
+  "colors": {
+    "primary": "#f4f8fc",
+    "secondary": "#6f8fb8",
+    "accent": "#3a7cc4"
+  },
+  "tokens": {
+    "all": {
+      "--hg-radius-sm": "8px",
+      "--hg-radius-md": "14px",
+      "--hg-radius-lg": "20px",
+      "--hg-frame-radius": "18px",
+      "--hg-frame-decoration-width": "1px",
+      "--hg-frame-decoration-style": "solid",
+      "--hg-meter-thickness": "4px",
+      "--hg-meter-cap": "round",
+      "--hg-meter-fill": "var(--accent)",
+      "--hg-button-radius": "999px",
+      "--hg-button-weight": "600"
+    },
+    "light": {
+      "--primary": "#f4f8fc",
+      "--secondary": "#6f8fb8",
+      "--accent": "#3a7cc4",
+      "--accent-rgb": "58, 124, 196",
+      "--background": "#e6f3fc",
+      "--hg-page-image": "linear-gradient(180deg, #a9d2f5 0%, #d7eaf9 55%, #eef5fb 100%)",
+      "--surface": "#fbfdff",
+      "--card-bg": "rgba(255, 255, 255, 0.78)",
+      "--hg-frame-bg": "rgba(255, 255, 255, 0.78)",
+      "--text": "#1c2836",
+      "--text-secondary": "#55677a",
+      "--border": "#d3dee9",
+      "--card-border": "#d3dee9",
+      "--hg-hover": "rgba(58, 124, 196, 0.1)",
+      "--hg-frame-decoration-color": "rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.55) rgba(28, 40, 54, 0.12) rgba(255, 255, 255, 0.55)",
+      "--hg-frame-shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 30px rgba(28, 52, 84, 0.18)",
+      "--hg-frame-shadow-hover": "inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 14px 38px rgba(28, 52, 84, 0.26)",
+      "--shadow": "0 6px 20px rgba(28, 52, 84, 0.16)",
+      "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 45%)",
+      "--hg-meter-track": "rgba(28, 40, 54, 0.12)",
+      "--bottom-bar-bg": "rgba(251, 253, 255, 0.86)",
+      "--dock-bg": "rgba(251, 253, 255, 0.86)",
+      "--dock-border": "rgba(255, 255, 255, 0.9)",
+      "--dock-separator": "rgba(28, 40, 54, 0.12)",
+      "--dock-icon": "#4a5d72",
+      "--dock-active-bg": "#3a7cc4",
+      "--dock-active-border": "#b5d3f0",
+      "--dock-active-icon": "#ffffff",
+      "--hg-button-bg": "linear-gradient(135deg, #3674ba, #2b62a0)",
+      "--hg-button-text": "#ffffff",
+      "--hg-button-quiet-border": "#93b7df"
+    },
+    "dark": {
+      "--primary": "#f4f8fc",
+      "--secondary": "#a9bde0",
+      "--accent": "#8fc8ff",
+      "--accent-rgb": "143, 200, 255",
+      "--background": "#111a28",
+      "--hg-page-image": "linear-gradient(180deg, #0b1526 0%, #0f1c30 55%, #111a28 100%)",
+      "--surface": "#121b2b",
+      "--card-bg": "rgba(14, 22, 36, 0.74)",
+      "--hg-frame-bg": "rgba(14, 22, 36, 0.74)",
+      "--text": "#e8f0f8",
+      "--text-secondary": "#9fb2c6",
+      "--border": "#26364d",
+      "--card-border": "#26364d",
+      "--hg-hover": "rgba(143, 200, 255, 0.14)",
+      "--hg-frame-decoration-color": "rgba(255, 255, 255, 0.14) rgba(255, 255, 255, 0.07) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.07)",
+      "--hg-frame-shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 32px rgba(0, 0, 0, 0.45)",
+      "--hg-frame-shadow-hover": "inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 28px rgba(143, 200, 255, 0.2)",
+      "--shadow": "0 6px 20px rgba(0, 0, 0, 0.4)",
+      "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 45%)",
+      "--hg-meter-track": "rgba(232, 240, 248, 0.16)",
+      "--bottom-bar-bg": "rgba(10, 16, 28, 0.86)",
+      "--dock-bg": "rgba(10, 16, 28, 0.86)",
+      "--dock-border": "rgba(143, 200, 255, 0.25)",
+      "--dock-separator": "rgba(232, 240, 248, 0.16)",
+      "--dock-icon": "#c5d4e4",
+      "--dock-active-bg": "#8fc8ff",
+      "--dock-active-border": "#d4ecff",
+      "--dock-active-icon": "#0c1424",
+      "--hg-button-bg": "linear-gradient(135deg, #b8e0ff, #8fc8ff)",
+      "--hg-button-text": "#0c1424",
+      "--hg-button-quiet-border": "#4d718d"
+    }
+  },
+  "mui": {
+    "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif",
+    "radius": 12,
+    "pillButtons": true
+  },
+  "muiModes": {
+    "light": {
+      "primary": "#3a7cc4",
+      "secondary": "#6f8fb8",
+      "error": "#d64550",
+      "background": "#e6f3fc",
+      "paper": "#fbfdff",
+      "text": "#1c2836",
+      "textSecondary": "#55677a",
+      "divider": "#d3dee9"
+    },
+    "dark": {
+      "primary": "#8fc8ff",
+      "secondary": "#a9bde0",
+      "error": "#d64550",
+      "background": "#111a28",
+      "paper": "#121b2b",
+      "text": "#e8f0f8",
+      "textSecondary": "#9fb2c6",
+      "divider": "#26364d"
+    }
+  },
+  "confetti": {
+    "colors": {
+      "light": [
+        "#3a7cc4",
+        "#8fc4ec",
+        "#ffd76a",
+        "#ffffff",
+        "#6f8fb8"
+      ],
+      "dark": [
+        "#8fc8ff",
+        "#e8f0f8",
+        "#ffe39a",
+        "#a9bde0"
+      ]
+    },
+    "shapes": [
+      "circle",
+      "square"
+    ]
+  },
+  "weather": {
+    "default": {
+      "ambience": [
+        {
+          "layer": "blobs",
+          "modes": [
+            "light"
+          ],
+          "colors": [
+            "#cfe6fb",
+            "#e6f1fb"
+          ],
+          "count": [
+            3,
+            4
+          ],
+          "size": [
+            55,
+            85
+          ],
+          "seconds": [
+            50,
+            90
+          ],
+          "opacity": 0.6
+        },
+        {
+          "layer": "blobs",
+          "modes": [
+            "dark"
+          ],
+          "colors": [
+            "#1a3050",
+            "#22324d"
+          ],
+          "count": [
+            3,
+            4
+          ],
+          "size": [
+            55,
+            85
+          ],
+          "seconds": [
+            50,
+            90
+          ],
+          "opacity": 0.48
+        },
+        {
+          "layer": "flyby",
+          "pictures": [
+            {
+              "src": "assets/cloud-a.svg",
+              "aspect": 2,
+              "weight": 3,
+              "tint": {
+                "light": [
+                  "#ffffff",
+                  "#f6f9fc"
+                ],
+                "dark": [
+                  "#3a4a63",
+                  "#33425a"
+                ]
+              }
+            },
+            {
+              "src": "assets/cloud-b.svg",
+              "aspect": 2.6,
+              "weight": 2,
+              "tint": {
+                "light": [
+                  "#ffffff",
+                  "#f6f9fc"
+                ],
+                "dark": [
+                  "#3a4a63",
+                  "#33425a"
+                ]
+              }
+            },
+            {
+              "src": "assets/cloud-c.svg",
+              "aspect": 1.75,
+              "weight": 2,
+              "tint": {
+                "light": [
+                  "#ffffff",
+                  "#f6f9fc"
+                ],
+                "dark": [
+                  "#3a4a63",
+                  "#33425a"
+                ]
+              }
+            }
+          ],
+          "count": 2,
+          "height": [
+            9,
+            16
+          ],
+          "seconds": [
+            90,
+            160
+          ],
+          "every": [
+            10,
+            40
+          ],
+          "span": [
+            2,
+            40
+          ],
+          "opacity": 0.9,
+          "begin": "underway"
+        }
+      ]
+    },
+    "scenes": {
+      "sunny": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #5fb0f0 0%, #a5d4f7 55%, #e6f3fc 100%)",
+            "--background": "#e6f3fc"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #050a1a 0%, #0b1530 55%, #16213d 100%)",
+            "--background": "#16213d"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "blobs",
+            "modes": [
+              "light"
+            ],
+            "colors": [
+              "#ffe7a3",
+              "#bfe2ff"
+            ],
+            "count": [
+              3,
+              4
+            ],
+            "size": [
+              55,
+              85
+            ],
+            "seconds": [
+              50,
+              90
+            ],
+            "opacity": 0.45
+          },
+          {
+            "layer": "blobs",
+            "modes": [
+              "dark"
+            ],
+            "colors": [
+              "#16284a",
+              "#1d2f55"
+            ],
+            "count": [
+              3,
+              4
+            ],
+            "size": [
+              55,
+              85
+            ],
+            "seconds": [
+              50,
+              90
+            ],
+            "opacity": 0.36000000000000004
+          },
+          {
+            "layer": "sprites",
+            "modes": [
+              "light"
+            ],
+            "src": "assets/sun.svg",
+            "count": 1,
+            "height": [
+              36,
+              42
+            ],
+            "aspect": 1,
+            "span": [
+              74,
+              86
+            ],
+            "base": "0px",
+            "lift": [
+              54,
+              58
+            ],
+            "motion": "pulse",
+            "seconds": [
+              8,
+              12
+            ],
+            "opacity": 1
+          },
+          {
+            "layer": "sprites",
+            "modes": [
+              "dark"
+            ],
+            "src": "assets/moon.svg",
+            "count": 1,
+            "height": [
+              26,
+              30
+            ],
+            "aspect": 1,
+            "span": [
+              74,
+              86
+            ],
+            "base": "0px",
+            "lift": [
+              60,
+              64
+            ],
+            "motion": "none"
+          },
+          {
+            "layer": "dots",
+            "modes": [
+              "dark"
+            ],
+            "count": 180,
+            "colors": [
+              {
+                "color": "#ffffff",
+                "weight": 4
+              },
+              {
+                "color": "#cfe0ff",
+                "weight": 2
+              },
+              {
+                "color": "#ffe9c4",
+                "weight": 1
+              }
+            ],
+            "size": [
+              0.6,
+              1.8
+            ],
+            "opacity": [
+              0.25,
+              0.9
+            ]
+          },
+          {
+            "layer": "particles",
+            "modes": [
+              "dark"
+            ],
+            "motion": "twinkle",
+            "count": 10,
+            "colors": [
+              "#ffffff",
+              "#dbe7ff"
+            ],
+            "size": [
+              2,
+              3
+            ]
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              }
+            ],
+            "count": 1,
+            "height": [
+              7,
+              11
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              30,
+              90
+            ],
+            "span": [
+              2,
+              40
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          }
+        ]
+      },
+      "partlycloudy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #7ab9ea 0%, #b9daf3 55%, #e9f2f9 100%)",
+            "--background": "#e9f2f9"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #08101f 0%, #101b30 55%, #18233a 100%)",
+            "--background": "#18233a"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "sprites",
+            "modes": [
+              "light"
+            ],
+            "src": "assets/sun.svg",
+            "count": 1,
+            "height": [
+              36,
+              42
+            ],
+            "aspect": 1,
+            "span": [
+              74,
+              86
+            ],
+            "base": "0px",
+            "lift": [
+              54,
+              58
+            ],
+            "motion": "pulse",
+            "seconds": [
+              8,
+              12
+            ],
+            "opacity": 0.85
+          },
+          {
+            "layer": "sprites",
+            "modes": [
+              "dark"
+            ],
+            "src": "assets/moon.svg",
+            "count": 1,
+            "height": [
+              26,
+              30
+            ],
+            "aspect": 1,
+            "span": [
+              74,
+              86
+            ],
+            "base": "0px",
+            "lift": [
+              60,
+              64
+            ],
+            "motion": "none"
+          },
+          {
+            "layer": "dots",
+            "modes": [
+              "dark"
+            ],
+            "count": 110,
+            "colors": [
+              {
+                "color": "#ffffff",
+                "weight": 4
+              },
+              {
+                "color": "#cfe0ff",
+                "weight": 2
+              },
+              {
+                "color": "#ffe9c4",
+                "weight": 1
+              }
+            ],
+            "size": [
+              0.6,
+              1.8
+            ],
+            "opacity": [
+              0.25,
+              0.9
+            ]
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              }
+            ],
+            "count": 3,
+            "height": [
+              9,
+              16
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              20
+            ],
+            "span": [
+              2,
+              40
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              }
+            ],
+            "count": 2,
+            "height": [
+              6,
+              9
+            ],
+            "seconds": [
+              140,
+              220
+            ],
+            "every": [
+              5,
+              30
+            ],
+            "span": [
+              10,
+              55
+            ],
+            "opacity": 0.7,
+            "begin": "underway"
+          }
+        ]
+      },
+      "cloudy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #9eacbb 0%, #c3ccd6 55%, #e0e5ea 100%)",
+            "--background": "#e0e5ea"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #10151d 0%, #171e28 55%, #1d2530 100%)",
+            "--background": "#1d2530"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "blobs",
+            "modes": [
+              "light"
+            ],
+            "colors": [
+              "#d9dfe6",
+              "#c9d1da"
+            ],
+            "count": [
+              3,
+              4
+            ],
+            "size": [
+              55,
+              85
+            ],
+            "seconds": [
+              50,
+              90
+            ],
+            "opacity": 0.6
+          },
+          {
+            "layer": "blobs",
+            "modes": [
+              "dark"
+            ],
+            "colors": [
+              "#1b2330",
+              "#202a38"
+            ],
+            "count": [
+              3,
+              4
+            ],
+            "size": [
+              55,
+              85
+            ],
+            "seconds": [
+              50,
+              90
+            ],
+            "opacity": 0.48
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              }
+            ],
+            "count": 5,
+            "height": [
+              11,
+              18
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              15
+            ],
+            "span": [
+              0,
+              45
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              }
+            ],
+            "count": 3,
+            "height": [
+              7,
+              11
+            ],
+            "seconds": [
+              150,
+              240
+            ],
+            "every": [
+              5,
+              30
+            ],
+            "span": [
+              20,
+              70
+            ],
+            "opacity": 0.75,
+            "begin": "underway"
+          }
+        ]
+      },
+      "fog": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #c2c8cf 0%, #d9dde1 55%, #e9ebed 100%)",
+            "--background": "#e9ebed"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #16191e 0%, #1d2127 55%, #23272d 100%)",
+            "--background": "#23272d"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "blobs",
+            "modes": [
+              "light"
+            ],
+            "colors": [
+              "#eef0f2",
+              "#dfe3e7"
+            ],
+            "count": [
+              3,
+              4
+            ],
+            "size": [
+              55,
+              85
+            ],
+            "seconds": [
+              50,
+              90
+            ],
+            "opacity": 0.7
+          },
+          {
+            "layer": "blobs",
+            "modes": [
+              "dark"
+            ],
+            "colors": [
+              "#2a2f36",
+              "#262a31"
+            ],
+            "count": [
+              3,
+              4
+            ],
+            "size": [
+              55,
+              85
+            ],
+            "seconds": [
+              50,
+              90
+            ],
+            "opacity": 0.5599999999999999
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/fog.svg",
+                "aspect": 4,
+                "tint": {
+                  "light": [
+                    "#ffffff"
+                  ],
+                  "dark": [
+                    "#7d8794",
+                    "#6f7985"
+                  ]
+                }
+              }
+            ],
+            "count": 5,
+            "height": [
+              20,
+              34
+            ],
+            "seconds": [
+              80,
+              140
+            ],
+            "every": [
+              5,
+              20
+            ],
+            "span": [
+              15,
+              85
+            ],
+            "opacity": 0.8,
+            "begin": "underway"
+          }
+        ]
+      },
+      "windy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #86b6de 0%, #b6d2ea 55%, #e3eef7 100%)",
+            "--background": "#e3eef7"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #0b1322 0%, #121c2d 55%, #192436 100%)",
+            "--background": "#192436"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#ffffff",
+                    "#f6f9fc"
+                  ],
+                  "dark": [
+                    "#3a4a63",
+                    "#33425a"
+                  ]
+                }
+              }
+            ],
+            "count": 4,
+            "height": [
+              9,
+              16
+            ],
+            "seconds": [
+              22,
+              38
+            ],
+            "every": [
+              5,
+              12
+            ],
+            "span": [
+              2,
+              40
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/gust.svg",
+                "aspect": 4,
+                "tint": {
+                  "light": [
+                    "#ffffff"
+                  ],
+                  "dark": [
+                    "#9fb6d6"
+                  ]
+                }
+              }
+            ],
+            "count": 3,
+            "height": [
+              3,
+              6
+            ],
+            "seconds": [
+              2.5,
+              4
+            ],
+            "every": [
+              5,
+              10
+            ],
+            "span": [
+              15,
+              85
+            ],
+            "opacity": 0.6
+          },
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/leaf.svg",
+                "aspect": 1.67,
+                "tint": {
+                  "light": [
+                    "#d9822b",
+                    "#c4562d",
+                    "#8fa83a",
+                    "#e0a83a"
+                  ],
+                  "dark": [
+                    "#a8662a",
+                    "#8f4a2a",
+                    "#6f8530"
+                  ]
+                }
+              }
+            ],
+            "count": 4,
+            "height": [
+              2.5,
+              4
+            ],
+            "seconds": [
+              5,
+              9
+            ],
+            "every": [
+              5,
+              12
+            ],
+            "span": [
+              20,
+              90
+            ],
+            "path": "wander",
+            "wander": 8,
+            "spin": [
+              360,
+              1080
+            ]
+          }
+        ]
+      },
+      "rainy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #7f8fa1 0%, #a6b2bf 55%, #ccd3db 100%)",
+            "--background": "#ccd3db"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #0a0f17 0%, #111822 55%, #18202b 100%)",
+            "--background": "#18202b"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              }
+            ],
+            "count": 4,
+            "height": [
+              10,
+              16
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              15
+            ],
+            "span": [
+              0,
+              30
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 36,
+            "size": [
+              26,
+              42
+            ],
+            "seconds": [
+              1,
+              1.6
+            ],
+            "drift": [
+              10,
+              30
+            ]
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 26,
+            "size": [
+              16,
+              26
+            ],
+            "seconds": [
+              1.3,
+              2
+            ],
+            "drift": [
+              10,
+              30
+            ],
+            "opacity": 0.6
+          }
+        ]
+      },
+      "pouring": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #5f6e80 0%, #8592a1 55%, #aeb7c2 100%)",
+            "--background": "#aeb7c2"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #06090f 0%, #0c1118 55%, #121821 100%)",
+            "--background": "#121821"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              }
+            ],
+            "count": 5,
+            "height": [
+              12,
+              18
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              12
+            ],
+            "span": [
+              0,
+              28
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 40,
+            "size": [
+              34,
+              54
+            ],
+            "seconds": [
+              1,
+              1.2
+            ],
+            "drift": [
+              20,
+              50
+            ]
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 40,
+            "size": [
+              22,
+              36
+            ],
+            "seconds": [
+              1.1,
+              1.4
+            ],
+            "drift": [
+              20,
+              50
+            ],
+            "opacity": 0.75
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 30,
+            "size": [
+              14,
+              22
+            ],
+            "seconds": [
+              1.3,
+              1.8
+            ],
+            "drift": [
+              20,
+              50
+            ],
+            "opacity": 0.5
+          }
+        ]
+      },
+      "snowy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #b8c3cf 0%, #d5dce4 55%, #eef2f6 100%)",
+            "--background": "#eef2f6"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #0f1520 0%, #172030 55%, #1f2a3b 100%)",
+            "--background": "#1f2a3b"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              }
+            ],
+            "count": 3,
+            "height": [
+              9,
+              14
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              30
+            ],
+            "span": [
+              0,
+              30
+            ],
+            "opacity": 0.8,
+            "begin": "underway"
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/flake-day.svg",
+              "dark": "assets/flake-night.svg"
+            },
+            "motion": "fall",
+            "count": 28,
+            "size": [
+              10,
+              22
+            ],
+            "seconds": [
+              10,
+              18
+            ],
+            "drift": [
+              40,
+              90
+            ]
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/flake-day.svg",
+              "dark": "assets/flake-night.svg"
+            },
+            "motion": "fall",
+            "count": 34,
+            "size": [
+              5,
+              10
+            ],
+            "seconds": [
+              14,
+              24
+            ],
+            "drift": [
+              40,
+              90
+            ],
+            "opacity": 0.7
+          }
+        ],
+        "confetti": {
+          "colors": {
+            "light": [
+              "#ffffff",
+              "#cfe0f2",
+              "#9fbbd8",
+              "#7f98b3"
+            ],
+            "dark": [
+              "#ffffff",
+              "#cfe0ff",
+              "#9fb6d6"
+            ]
+          },
+          "shapes": [
+            "circle"
+          ],
+          "pictures": [
+            {
+              "src": {
+                "light": "assets/flake-day.svg",
+                "dark": "assets/flake-night.svg"
+              },
+              "height": 16
+            }
+          ],
+          "mix": 0.4
+        }
+      },
+      "snowy-rainy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #9daab8 0%, #bfc8d2 55%, #dde3e9 100%)",
+            "--background": "#dde3e9"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #0c121b 0%, #141c27 55%, #1b2431 100%)",
+            "--background": "#1b2431"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#eef1f4",
+                    "#e2e7ec",
+                    "#d6dce3"
+                  ],
+                  "dark": [
+                    "#2a3342",
+                    "#252d3a"
+                  ]
+                }
+              }
+            ],
+            "count": 4,
+            "height": [
+              10,
+              16
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              30
+            ],
+            "span": [
+              0,
+              30
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 24,
+            "size": [
+              26,
+              42
+            ],
+            "seconds": [
+              1,
+              1.6
+            ],
+            "drift": [
+              10,
+              30
+            ]
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/flake-day.svg",
+              "dark": "assets/flake-night.svg"
+            },
+            "motion": "fall",
+            "count": 18,
+            "size": [
+              10,
+              22
+            ],
+            "seconds": [
+              6,
+              10
+            ],
+            "drift": [
+              20,
+              50
+            ]
+          }
+        ]
+      },
+      "hail": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #8796a6 0%, #aab5c1 55%, #cdd4dc 100%)",
+            "--background": "#cdd4dc"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #0a0e15 0%, #121821 55%, #19202b 100%)",
+            "--background": "#19202b"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              }
+            ],
+            "count": 4,
+            "height": [
+              11,
+              17
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              30
+            ],
+            "span": [
+              0,
+              28
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "particles",
+            "src": "assets/hail.svg",
+            "motion": "fall",
+            "count": 34,
+            "size": [
+              6,
+              11
+            ],
+            "seconds": [
+              1.1,
+              1.8
+            ],
+            "drift": [
+              5,
+              15
+            ]
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 16,
+            "size": [
+              26,
+              42
+            ],
+            "seconds": [
+              1,
+              1.6
+            ],
+            "drift": [
+              10,
+              30
+            ],
+            "opacity": 0.6
+          }
+        ]
+      },
+      "lightning": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #4d5566 0%, #6e7686 55%, #949aa6 100%)",
+            "--background": "#949aa6"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #05060b 0%, #0b0d15 55%, #12141e 100%)",
+            "--background": "#12141e"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              }
+            ],
+            "count": 5,
+            "height": [
+              12,
+              20
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              12
+            ],
+            "span": [
+              0,
+              30
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "flash",
+            "color": "#f1f4ff",
+            "every": [
+              7,
+              20
+            ],
+            "strength": 0.35
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 18,
+            "size": [
+              26,
+              42
+            ],
+            "seconds": [
+              1,
+              1.6
+            ],
+            "drift": [
+              10,
+              30
+            ],
+            "opacity": 0.7
+          }
+        ]
+      },
+      "lightning-rainy": {
+        "tokens": {
+          "light": {
+            "--hg-page-image": "linear-gradient(180deg, #454c5c 0%, #656d7c 55%, #8a919d 100%)",
+            "--background": "#8a919d"
+          },
+          "dark": {
+            "--hg-page-image": "linear-gradient(180deg, #040509 0%, #090b12 55%, #10121b 100%)",
+            "--background": "#10121b"
+          }
+        },
+        "ambience": [
+          {
+            "layer": "flyby",
+            "pictures": [
+              {
+                "src": "assets/cloud-a.svg",
+                "aspect": 2,
+                "weight": 3,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-b.svg",
+                "aspect": 2.6,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              },
+              {
+                "src": "assets/cloud-c.svg",
+                "aspect": 1.75,
+                "weight": 2,
+                "tint": {
+                  "light": [
+                    "#8d96a3",
+                    "#7c8592",
+                    "#9aa2ad"
+                  ],
+                  "dark": [
+                    "#1c222c",
+                    "#20262f"
+                  ]
+                }
+              }
+            ],
+            "count": 6,
+            "height": [
+              12,
+              20
+            ],
+            "seconds": [
+              90,
+              160
+            ],
+            "every": [
+              5,
+              10
+            ],
+            "span": [
+              0,
+              30
+            ],
+            "opacity": 0.9,
+            "begin": "underway"
+          },
+          {
+            "layer": "flash",
+            "color": "#f1f4ff",
+            "every": [
+              6,
+              16
+            ],
+            "strength": 0.35
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 40,
+            "size": [
+              32,
+              50
+            ],
+            "seconds": [
+              1,
+              1.3
+            ],
+            "drift": [
+              20,
+              45
+            ]
+          },
+          {
+            "layer": "particles",
+            "src": {
+              "light": "assets/drop-day.svg",
+              "dark": "assets/drop-night.svg"
+            },
+            "motion": "fall",
+            "count": 30,
+            "size": [
+              20,
+              32
+            ],
+            "seconds": [
+              1.2,
+              1.5
+            ],
+            "drift": [
+              20,
+              45
+            ],
+            "opacity": 0.65
+          }
+        ]
+      }
+    }
+  }
+}
