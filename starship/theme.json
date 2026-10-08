@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 3,
+  "manifestVersion": 4,
   "id": "starship",
-  "version": "1.2.0",
+  "version": "1.4.1",
   "author": "mrramam",
   "name": "Starship",
   "description": "A 24th-century bridge console: black field, pill controls, curved frame elbows. Outside the viewport, planets, the odd galaxy, passing ships and the occasional drifting alien.",
@@ -257,11 +257,7 @@
           "weight": 2
         }
       ],
-      "path": "arc",
-      "bend": [
-        3,
-        10
-      ],
+      "path": "orbit",
       "span": [
         8,
         55
@@ -287,7 +283,83 @@
         0,
         35
       ],
-      "chance": 0.75
+      "chance": 0.75,
+      "focusX": [
+        -40,
+        140
+      ],
+      "focusY": [
+        150,
+        260
+      ],
+      "eccentricity": [
+        0,
+        0.35
+      ]
+    },
+    {
+      "layer": "flyby",
+      "pictures": [
+        {
+          "src": "assets/station-iss.webp",
+          "aspect": 1.62,
+          "height": [
+            14,
+            20
+          ],
+          "weight": 1
+        },
+        {
+          "src": "assets/station-mir.webp",
+          "aspect": 0.9,
+          "height": [
+            16,
+            22
+          ],
+          "weight": 1
+        },
+        {
+          "src": "assets/station-skylab.webp",
+          "aspect": 1.02,
+          "height": [
+            16,
+            22
+          ],
+          "weight": 1
+        },
+        {
+          "src": "assets/station-torus.webp",
+          "aspect": 2.65,
+          "height": [
+            10,
+            14
+          ],
+          "weight": 1
+        }
+      ],
+      "span": [
+        10,
+        60
+      ],
+      "seconds": [
+        240,
+        300
+      ],
+      "every": [
+        240,
+        720
+      ],
+      "tilt": [
+        0,
+        4
+      ],
+      "spin": [
+        20,
+        60
+      ],
+      "opacity": 0.95,
+      "chance": 0.6,
+      "begin": "underway"
     },
     {
       "layer": "particles",
