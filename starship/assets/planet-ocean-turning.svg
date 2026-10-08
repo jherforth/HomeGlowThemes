@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <style>.s{animation:turn 100s linear infinite}.c{animation:turn 70s linear infinite}@keyframes turn{to{transform:translateX(-200px)}}@media (prefers-reduced-motion: reduce){.s,.c{animation:none}}</style>
+  <defs>
+    <clipPath id="c"><circle cx="100" cy="100" r="94"/></clipPath>
+    <radialGradient id="sea" cx="0.5" cy="0.5" r="0.55"><stop offset="0" stop-color="#3d97e0"/><stop offset="1" stop-color="#1f6fc0"/></radialGradient>
+    <radialGradient id="air" cx="0.5" cy="0.5" r="0.5"><stop offset="0.86" stop-color="#8fd8ff" stop-opacity="0"/><stop offset="1" stop-color="#8fd8ff" stop-opacity="0.6"/></radialGradient>
+    <radialGradient id="shade" cx="0.36" cy="0.32" r="0.8"><stop offset="0" stop-color="#bfe8ff" stop-opacity="0.35"/><stop offset="0.45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#020a1c" stop-opacity="0.85"/></radialGradient>
+    <g id="land"><path d="M40 60 Q70 40 92 62 Q86 90 60 96 Q38 86 40 60 Z" fill="#4f9a5a"/><path d="M118 108 Q150 96 164 122 Q150 150 124 146 Q108 128 118 108 Z" fill="#5fa863"/><path d="M150 40 Q172 34 184 52 Q172 64 156 58 Z" fill="#4f9a5a"/></g>
+    <g id="cloud" fill="#ffffff" opacity="0.75"><path d="M20 84 Q60 74 100 86 Q70 92 20 90 Z"/><path d="M90 40 Q130 30 170 44 Q130 48 90 46 Z"/><path d="M60 150 Q110 140 160 156 Q110 160 60 156 Z"/></g>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="200" height="200" fill="url(#sea)"/>
+    <g class="s"><use href="#land"/><use href="#land" x="200"/></g>
+    <g class="c"><use href="#cloud"/><use href="#cloud" x="200"/></g>
+    <circle cx="100" cy="100" r="94" fill="url(#shade)"/>
+  </g>
+  <circle cx="100" cy="100" r="99" fill="url(#air)"/>
+</svg>

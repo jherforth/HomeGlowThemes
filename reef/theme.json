@@ -1,7 +1,7 @@
 {
-  "manifestVersion": 2,
+  "manifestVersion": 3,
   "id": "reef",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "mrramam",
   "name": "Reef",
   "description": "A dive: sunlit shallows in light mode, a night dive in dark. Water gradients, coral and bioluminescent accents, bubble-soft frames.",
@@ -52,7 +52,9 @@
       "--hg-frame-inset": "6px",
       "--hg-meter-thickness": "4px",
       "--hg-meter-cap": "round",
-      "--hg-meter-fill": "var(--accent)"
+      "--hg-meter-fill": "var(--accent)",
+      "--hg-button-radius": "999px",
+      "--hg-button-weight": "700"
     },
     "light": {
       "--primary": "#c8f4ff",
@@ -82,7 +84,10 @@
       "--dock-active-border": "#ffb199",
       "--dock-active-icon": "#06324a",
       "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.08) 35%, rgba(0, 70, 110, 0.12) 100%)",
-      "--hg-meter-track": "rgba(6, 50, 74, 0.15)"
+      "--hg-meter-track": "rgba(6, 50, 74, 0.15)",
+      "--hg-button-bg": "linear-gradient(135deg, #ff9f7a, #ff7f50)",
+      "--hg-button-text": "#06324a",
+      "--hg-button-quiet-border": "#7fbfd2"
     },
     "dark": {
       "--primary": "#c8f4ff",
@@ -112,7 +117,10 @@
       "--dock-active-border": "#b6f6ff",
       "--dock-active-icon": "#021628",
       "--hg-frame-image": "linear-gradient(180deg, rgba(120, 220, 255, 0.12) 0%, rgba(120, 220, 255, 0.02) 35%, rgba(0, 0, 0, 0.25) 100%)",
-      "--hg-meter-track": "rgba(216, 246, 255, 0.18)"
+      "--hg-meter-track": "rgba(216, 246, 255, 0.18)",
+      "--hg-button-bg": "linear-gradient(135deg, #8ff2ff, #3ee6ff)",
+      "--hg-button-text": "#04182b",
+      "--hg-button-quiet-border": "#2f7d9b"
     }
   },
   "mui": {
@@ -328,6 +336,32 @@
           ]
         }
       ]
+    },
+    {
+      "layer": "sprites",
+      "pictures": [
+        {
+          "src": {
+            "light": "assets/octopus-day.svg",
+            "dark": "assets/octopus-night.svg"
+          },
+          "aspect": 1,
+          "height": [
+            9,
+            13
+          ]
+        }
+      ],
+      "motion": "none",
+      "count": 1,
+      "span": [
+        8,
+        92
+      ],
+      "base": "2vh",
+      "flip": true,
+      "opacity": 0.95,
+      "chance": 0.7
     },
     {
       "layer": "sprites",
