@@ -1407,7 +1407,7 @@
               "dark": "assets/drop-night.svg"
             },
             "motion": "fall",
-            "count": 40,
+            "count": 30,
             "size": [
               34,
               54
@@ -1428,7 +1428,7 @@
               "dark": "assets/drop-night.svg"
             },
             "motion": "fall",
-            "count": 40,
+            "count": 28,
             "size": [
               22,
               36
@@ -1450,7 +1450,7 @@
               "dark": "assets/drop-night.svg"
             },
             "motion": "fall",
-            "count": 30,
+            "count": 20,
             "size": [
               14,
               22
@@ -2095,7 +2095,7 @@
               "dark": "assets/drop-night.svg"
             },
             "motion": "fall",
-            "count": 40,
+            "count": 32,
             "size": [
               32,
               50
@@ -2116,7 +2116,7 @@
               "dark": "assets/drop-night.svg"
             },
             "motion": "fall",
-            "count": 30,
+            "count": 24,
             "size": [
               20,
               32
