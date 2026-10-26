@@ -1,0 +1,549 @@
+{
+ "ambience": [
+  {
+   "colors": [
+    "#f59e0b",
+    "#ea580c",
+    "#c084fc",
+    "#84cc16",
+    "#fb923c",
+    "#a78bfa",
+    "#facc15",
+    "#4ade80"
+   ],
+   "count": [
+    5,
+    8
+   ],
+   "layer": "blobs",
+   "modes": [
+    "light"
+   ],
+   "opacity": 0.45,
+   "seconds": [
+    25,
+    75
+   ],
+   "size": [
+    30,
+    90
+   ]
+  },
+  {
+   "colors": [
+    "#7c3aed",
+    "#ea580c",
+    "#16a34a",
+    "#a855f7",
+    "#9333ea",
+    "#f97316",
+    "#22c55e",
+    "#eab308"
+   ],
+   "count": [
+    5,
+    8
+   ],
+   "layer": "blobs",
+   "modes": [
+    "dark"
+   ],
+   "opacity": 0.42,
+   "seconds": [
+    25,
+    75
+   ],
+   "size": [
+    30,
+    90
+   ]
+  },
+  {
+   "aspect": 1.0,
+   "count": 1,
+   "height": 12,
+   "layer": "sprites",
+   "lift": [
+    78,
+    82
+   ],
+   "modes": [
+    "dark"
+   ],
+   "motion": "none",
+   "opacity": 0.95,
+   "span": [
+    84,
+    92
+   ],
+   "src": "assets/moon.svg"
+  },
+  {
+   "begin": "underway",
+   "count": 1,
+   "every": [
+    60,
+    120
+   ],
+   "height": [
+    14,
+    18
+   ],
+   "layer": "flyby",
+   "opacity": 0.95,
+   "path": "wander",
+   "pictures": [
+    {
+     "aspect": 1.51,
+     "src": "assets/witch.png",
+     "tint": {
+      "dark": [
+       "#ddd0ff"
+      ],
+      "light": [
+       "#2b1a3e"
+      ]
+     }
+    }
+   ],
+   "seconds": [
+    28,
+    40
+   ],
+   "span": [
+    12,
+    40
+   ]
+  },
+  {
+   "begin": "underway",
+   "count": 1,
+   "every": [
+    30,
+    60
+   ],
+   "height": [
+    2,
+    3
+   ],
+   "layer": "flyby",
+   "opacity": 0.95,
+   "path": "wander",
+   "pictures": [
+    {
+     "aspect": 2.05,
+     "src": "assets/bat-real.png",
+     "tint": {
+      "dark": [
+       "#c4b5fd"
+      ],
+      "light": [
+       "#2b1a3e"
+      ]
+     }
+    }
+   ],
+   "seconds": [
+    10,
+    18
+   ],
+   "span": [
+    12,
+    45
+   ]
+  },
+  {
+   "begin": "underway",
+   "count": 1,
+   "every": [
+    45,
+    90
+   ],
+   "height": [
+    10,
+    14
+   ],
+   "layer": "flyby",
+   "opacity": 0.92,
+   "path": "arc",
+   "pictures": [
+    {
+     "aspect": 0.7,
+     "src": "assets/ghost.svg"
+    }
+   ],
+   "seconds": [
+    25,
+    40
+   ],
+   "span": [
+    30,
+    60
+   ]
+  },
+  {
+   "count": [
+    4,
+    7
+   ],
+   "drift": 60,
+   "layer": "particles",
+   "motion": "fall",
+   "opacity": 0.9,
+   "seconds": [
+    32,
+    50
+   ],
+   "size": [
+    14,
+    22
+   ],
+   "span": [
+    0,
+    100
+   ],
+   "src": "assets/candy-corn.svg"
+  },
+  {
+   "count": [
+    4,
+    7
+   ],
+   "drift": 50,
+   "layer": "particles",
+   "motion": "fall",
+   "opacity": 0.9,
+   "seconds": [
+    30,
+    48
+   ],
+   "size": [
+    16,
+    24
+   ],
+   "span": [
+    0,
+    100
+   ],
+   "src": "assets/wrapped-candy.svg"
+  },
+  {
+   "count": [
+    3,
+    6
+   ],
+   "drift": 50,
+   "layer": "particles",
+   "motion": "fall",
+   "opacity": 0.9,
+   "seconds": [
+    30,
+    48
+   ],
+   "size": [
+    14,
+    20
+   ],
+   "span": [
+    0,
+    100
+   ],
+   "src": "assets/lollipop.svg"
+  },
+  {
+   "colors": [
+    "#4ade80",
+    "#a78bfa"
+   ],
+   "count": [
+    8,
+    14
+   ],
+   "drift": 20,
+   "layer": "particles",
+   "motion": "rise",
+   "opacity": 0.85,
+   "seconds": [
+    8,
+    16
+   ],
+   "size": [
+    4,
+    10
+   ],
+   "span": [
+    10,
+    19
+   ]
+  },
+  {
+   "base": "0px",
+   "height": [
+    6,
+    12
+   ],
+   "layer": "sprites",
+   "motion": "none",
+   "opacity": 1,
+   "pictures": [
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-leonard.png",
+     "height": 6
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-tyrell.png",
+     "height": 6
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-chuck.png",
+     "height": 6
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-lou.png",
+     "height": 6
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-igor.png",
+     "height": 9
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-wolfy.png",
+     "height": 9
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-vladimir.png",
+     "height": 9
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-ignac.png",
+     "height": 9
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-brian.png",
+     "height": 9
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-trent.png",
+     "height": 9
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-jimmy.png",
+     "height": 12
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-randy.png",
+     "height": 12
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-frank.png",
+     "height": 12
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-shmalvin.png",
+     "height": 12
+    },
+    {
+     "aspect": 1.0,
+     "src": "assets/simanek-jack-o-lantern.png",
+     "height": 12
+    }
+   ],
+   "span": [
+    42,
+    86
+   ],
+   "count": [
+    3,
+    4
+   ]
+  },
+  {
+   "aspect": 0.85,
+   "base": "0px",
+   "count": 1,
+   "height": 13,
+   "layer": "sprites",
+   "motion": "none",
+   "opacity": 1,
+   "span": [
+    13,
+    16
+   ],
+   "src": "assets/cauldron.svg"
+  }
+ ],
+ "author": "adamecker",
+ "colors": {
+  "accent": "#ea580c",
+  "primary": "#fdf3e3",
+  "secondary": "#7c3aed"
+ },
+ "confetti": {
+  "colors": {
+   "dark": [
+    "#fb923c",
+    "#a78bfa",
+    "#4ade80",
+    "#fde047"
+   ],
+   "light": [
+    "#ea580c",
+    "#7c3aed",
+    "#16a34a",
+    "#facc15"
+   ]
+  },
+  "mix": 0.25,
+  "pictures": [
+   {
+    "aspect": 1.0,
+    "height": 18,
+    "src": "assets/simanek-jack-o-lantern.png"
+   }
+  ],
+  "shapes": [
+   "square",
+   "circle"
+  ]
+ },
+ "description": "Spooky but sweet: glowing jack-o'-lanterns, ghosts and bats flying across the sky, a witch crossing the sky, falling candy, and a bubbling cauldron. Warm pumpkin and purple glows over autumn cream by day, deep plum night after dark. Clean and calm enough for the whole family.",
+ "extends": "classic",
+ "id": "halloween",
+ "manifestVersion": 9,
+ "modes": [
+  "light",
+  "dark"
+ ],
+ "mui": {
+  "fontFamily": "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif",
+  "pillButtons": true,
+  "radius": 12
+ },
+ "muiModes": {
+  "dark": {
+   "background": "#1a0f2e",
+   "divider": "#4a3568",
+   "error": "#ef5350",
+   "paper": "#2a1a44",
+   "primary": "#fb923c",
+   "secondary": "#a78bfa",
+   "text": "#f5ead9",
+   "textSecondary": "#c9b8e0"
+  },
+  "light": {
+   "background": "#fdf3e3",
+   "divider": "#eccfa8",
+   "error": "#c0392b",
+   "paper": "#fffaf2",
+   "primary": "#ea580c",
+   "secondary": "#7c3aed",
+   "text": "#2e1a2e",
+   "textSecondary": "#7a5a6e"
+  }
+ },
+ "name": "Halloween",
+ "tokens": {
+  "all": {
+   "--hg-button-radius": "999px",
+   "--hg-button-weight": "600",
+   "--hg-error": "#c0392b",
+   "--hg-error-hover": "#a93226",
+   "--hg-error-surface": "rgba(192, 57, 43, 0.14)",
+   "--hg-frame-decoration-style": "solid",
+   "--hg-frame-decoration-width": "1px",
+   "--hg-frame-radius": "16px",
+   "--hg-meter-cap": "round",
+   "--hg-meter-fill": "var(--accent)",
+   "--hg-meter-thickness": "4px",
+   "--hg-radius-lg": "20px",
+   "--hg-radius-md": "14px",
+   "--hg-radius-sm": "8px",
+   "--success": "#16a34a",
+   "--warning": "#d97706"
+  },
+  "dark": {
+   "--accent": "#fb923c",
+   "--accent-rgb": "251, 146, 60",
+   "--background": "#1a0f2e",
+   "--border": "#4a3568",
+   "--bottom-bar-bg": "rgba(26, 15, 46, 0.84)",
+   "--card-bg": "rgba(42, 26, 68, 0.88)",
+   "--card-border": "#4a3568",
+   "--dock-active-bg": "#fb923c",
+   "--dock-active-border": "#fdba74",
+   "--dock-active-icon": "#1a0f2e",
+   "--dock-bg": "rgba(26, 15, 46, 0.84)",
+   "--dock-border": "rgba(251, 146, 60, 0.25)",
+   "--dock-icon": "#e0d0f5",
+   "--dock-separator": "rgba(245, 234, 217, 0.16)",
+   "--hg-button-bg": "linear-gradient(135deg, #fdba74, #fb923c)",
+   "--hg-button-quiet-border": "#7c5a3e",
+   "--hg-button-text": "#1a0f2e",
+   "--hg-frame-bg": "rgba(42, 26, 68, 0.88)",
+   "--hg-frame-decoration-color": "rgba(255, 255, 255, 0.14) rgba(255, 255, 255, 0.07) rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0.07)",
+   "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 45%)",
+   "--hg-frame-overlay": "linear-gradient(120deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.01) 30%, rgba(255, 255, 255, 0) 45%)",
+   "--hg-frame-shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 32px rgba(0, 0, 0, 0.4)",
+   "--hg-frame-shadow-hover": "inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 28px rgba(251, 146, 60, 0.22)",
+   "--hg-hover": "rgba(251, 146, 60, 0.14)",
+   "--hg-meter-track": "rgba(245, 234, 217, 0.16)",
+   "--hg-page-image": "radial-gradient(60% 50% at 50% 0%, rgba(124, 58, 237, 0.35), transparent 70%), radial-gradient(50% 40% at 85% 100%, rgba(234, 88, 12, 0.30), transparent 70%), linear-gradient(170deg, #241640 0%, #1a0f2e 55%, #150a26 100%)",
+   "--primary": "#f5ead9",
+   "--secondary": "#a78bfa",
+   "--shadow": "0 6px 20px rgba(0, 0, 0, 0.35)",
+   "--surface": "#2a1a44",
+   "--text": "#f5ead9",
+   "--text-secondary": "#c9b8e0"
+  },
+  "light": {
+   "--accent": "#ea580c",
+   "--accent-rgb": "234, 88, 12",
+   "--background": "#fdf3e3",
+   "--border": "#eccfa8",
+   "--bottom-bar-bg": "rgba(255, 250, 242, 0.84)",
+   "--card-bg": "rgba(255, 251, 244, 0.90)",
+   "--card-border": "#eccfa8",
+   "--dock-active-bg": "#ea580c",
+   "--dock-active-border": "#fdba74",
+   "--dock-active-icon": "#fff7ee",
+   "--dock-bg": "rgba(255, 250, 242, 0.84)",
+   "--dock-border": "rgba(255, 255, 255, 0.9)",
+   "--dock-icon": "#6a4a5e",
+   "--dock-separator": "rgba(46, 26, 46, 0.12)",
+   "--hg-button-bg": "linear-gradient(135deg, #ea580c, #c2410c)",
+   "--hg-button-quiet-border": "#dd9f8d",
+   "--hg-button-text": "#ffffff",
+   "--hg-frame-bg": "rgba(255, 251, 244, 0.90)",
+   "--hg-frame-decoration-color": "rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.55) rgba(46, 26, 46, 0.12) rgba(255, 255, 255, 0.55)",
+   "--hg-frame-image": "linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 45%)",
+   "--hg-frame-overlay": "linear-gradient(120deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.04) 30%, rgba(255, 255, 255, 0) 45%)",
+   "--hg-frame-shadow": "inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 30px rgba(110, 68, 38, 0.16)",
+   "--hg-frame-shadow-hover": "inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 14px 38px rgba(110, 68, 38, 0.24)",
+   "--hg-hover": "rgba(234, 88, 12, 0.1)",
+   "--hg-meter-track": "rgba(46, 26, 46, 0.12)",
+   "--hg-page-image": "linear-gradient(170deg, #fdf3e3 0%, #fbe7c6 55%, #f5d9a8 100%)",
+   "--primary": "#fdf3e3",
+   "--secondary": "#7c3aed",
+   "--shadow": "0 6px 20px rgba(110, 68, 38, 0.14)",
+   "--surface": "#fffaf2",
+   "--text": "#2e1a2e",
+   "--text-secondary": "#7a5a6e"
+  }
+ },
+ "variety": "load",
+ "version": "1.0.0"
+}
