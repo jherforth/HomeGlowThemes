@@ -1,7 +1,7 @@
 {
   "manifestVersion": 9,
   "id": "starship",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "author": "mrramam",
   "name": "Starship",
   "description": "A 24th-century bridge console: black field, pill controls, curved frame elbows. Outside the viewport, planets, the odd galaxy, passing ships and the occasional drifting alien. Now and then a black hole drifts past, bending the stars behind it.",
@@ -270,10 +270,6 @@
         30,
         120
       ],
-      "count": [
-        1,
-        2
-      ],
       "begin": "underway",
       "hue": [
         0,
@@ -434,22 +430,42 @@
     },
     {
       "layer": "streaks",
-      "color": "#ffdcae",
+      "color": "#b89a78",
       "burst": [
-        10,
-        22
+        3,
+        14
       ],
       "length": [
-        60,
-        150
+        30,
+        130
       ],
       "every": [
-        60,
-        180
+        100,
+        260
       ],
       "seconds": [
-        0.7,
-        1.4
+        0.8,
+        1.6
+      ]
+    },
+    {
+      "layer": "streaks",
+      "color": "#fff1d6",
+      "burst": [
+        14,
+        40
+      ],
+      "length": [
+        90,
+        320
+      ],
+      "every": [
+        130,
+        340
+      ],
+      "seconds": [
+        0.6,
+        1.3
       ]
     },
     {
@@ -601,7 +617,7 @@
         25
       ],
       "begin": "underway",
-      "chance": 0.6
+      "chance": 0.18
     },
     {
       "layer": "flyby",
